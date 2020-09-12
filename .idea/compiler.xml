@@ -7,13 +7,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="xml" />
+        <module name="mysql" />
+        <module name="aop" />
+        <module name="anno" />
+        <module name="jdbc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="anno" target="14" />
+      <module name="aop" target="14" />
       <module name="d" target="14" />
       <module name="ddd" target="14" />
+      <module name="jdbc" target="14" />
       <module name="lalala" target="14" />
       <module name="learnxml" target="14" />
+      <module name="mysql" target="14" />
+      <module name="practice" target="14" />
       <module name="q" target="14" />
       <module name="shop" target="14" />
       <module name="spring_aop" target="14" />
