@@ -8,9 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="xml" />
         <module name="mysql" />
+        <module name="transaction" />
         <module name="aop" />
         <module name="anno" />
         <module name="jdbc" />
+        <module name="practice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,6 +29,7 @@
       <module name="shop" target="14" />
       <module name="spring_aop" target="14" />
       <module name="sss" target="14" />
+      <module name="transaction" target="14" />
       <module name="wtf" target="14" />
       <module name="xml" target="14" />
     </bytecodeTargetLevel>

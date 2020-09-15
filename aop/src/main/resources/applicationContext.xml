@@ -12,7 +12,8 @@
 <!--        &lt;!&ndash;声明切面&ndash;&gt;-->
 <!--        <aop:aspect ref="myAspect">-->
 <!--        &lt;!&ndash;切面：切点+通知&ndash;&gt;-->
-<!--&lt;!&ndash;            public（修饰符）可省略&ndash;&gt;-->
+<!--    &lt;!&ndash;public（修饰符）可省略&ndash;&gt;-->
+<!--    &lt;!&ndash;execution([修饰符] 返回值类型 包名.类名.方法名(参数))&ndash;&gt;-->
 <!--&lt;!&ndash;            <aop:before method="before" pointcut="execution(public void com.jmc.aop.Target.save())"/>&ndash;&gt;-->
 <!--            <aop:pointcut id="p" expression="execution(* com.jmc.aop..*.*(..))"/>-->
 <!--            <aop:before method="before" pointcut="execution(* com.jmc.aop..*.*(..))"/>-->

@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/anno/pom.xml" />
         <option value="$PROJECT_DIR$/aop/pom.xml" />
         <option value="$PROJECT_DIR$/jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/practice/pom.xml" />
+        <option value="$PROJECT_DIR$/transaction/pom.xml" />
       </list>
     </option>
   </component>
