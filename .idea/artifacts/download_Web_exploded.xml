@@ -1,11 +1,11 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="practice:Web exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/practice_Web_exploded</output-path>
+  <artifact type="exploded-war" name="download:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/download_Web_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="practice/web/Web" />
+      <element id="javaee-facet-resources" facet="download/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="practice" />
+          <element id="module-output" name="download" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />

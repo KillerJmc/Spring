@@ -22,12 +22,16 @@ public class RequestDemo3 extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //解决post控制台乱码问题（get没此问题）
         req.setCharacterEncoding("utf-8");
+
+
+        resp.setContentType("text/html;charset=utf-8");
+
         //get, post均通用
         String username = req.getParameter("username");
         String password = req.getParameter("password");
+
         System.out.println("用户名：" + username);
         System.out.println("密码：" + password);
-        //resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println("用户名：" + username);
         resp.getWriter().println("密码：" + password);
 
@@ -35,7 +39,7 @@ public class RequestDemo3 extends HttpServlet {
 //
 //        Enumeration<String> parameterNames = req.getParameterNames();
 //        while (parameterNames.hasMoreElements()) {
-//            String[] values = req.getParameterValues("username");
+//            String[] values = req.getParameterValues(parameterNames.nextElement());
 //            System.out.println(parameterNames.nextElement() + " : "
 //                    + Arrays.toString(values));
 //        }

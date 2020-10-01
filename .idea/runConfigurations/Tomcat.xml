@@ -1,15 +1,41 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="14">
     <option name="OPEN_IN_BROWSER" value="false" />
-    <option name="OPEN_IN_BROWSER_URL" value="http://localhost/ser/" />
+    <option name="OPEN_IN_BROWSER_URL" value="http://localhost/" />
     <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
     <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+    <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
     <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
     <option name="UPDATING_POLICY" value="redeploy-artifacts" />
     <deployment>
       <artifact name="servlet:Web exploded">
         <settings>
           <option name="CONTEXT_PATH" value="/ser" />
+        </settings>
+      </artifact>
+      <artifact name="practice:Web exploded">
+        <settings>
+          <option name="CONTEXT_PATH" value="/p" />
+        </settings>
+      </artifact>
+      <artifact name="login:Web exploded">
+        <settings>
+          <option name="CONTEXT_PATH" value="/l" />
+        </settings>
+      </artifact>
+      <artifact name="check_code:Web exploded">
+        <settings>
+          <option name="CONTEXT_PATH" value="/cc" />
+        </settings>
+      </artifact>
+      <artifact name="download:Web exploded">
+        <settings>
+          <option name="CONTEXT_PATH" value="/dl" />
+        </settings>
+      </artifact>
+      <artifact name="remember_time:Web exploded">
+        <settings>
+          <option name="CONTEXT_PATH" value="/rt" />
         </settings>
       </artifact>
     </deployment>
@@ -74,6 +100,11 @@
       <option name="Make" enabled="true" />
       <option name="BuildArtifacts" enabled="true">
         <artifact name="servlet:Web exploded" />
+        <artifact name="practice:Web exploded" />
+        <artifact name="login:Web exploded" />
+        <artifact name="check_code:Web exploded" />
+        <artifact name="download:Web exploded" />
+        <artifact name="remember_time:Web exploded" />
       </option>
     </method>
   </configuration>
