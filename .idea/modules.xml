@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/aop/aop.iml" filepath="$PROJECT_DIR$/aop/aop.iml" />
       <module fileurl="file://$PROJECT_DIR$/apply/apply.iml" filepath="$PROJECT_DIR$/apply/apply.iml" />
       <module fileurl="file://$PROJECT_DIR$/apply/check_code/check_code.iml" filepath="$PROJECT_DIR$/apply/check_code/check_code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apply/check_code_2/check_code_2.iml" filepath="$PROJECT_DIR$/apply/check_code_2/check_code_2.iml" />
       <module fileurl="file://$PROJECT_DIR$/apply/download/download.iml" filepath="$PROJECT_DIR$/apply/download/download.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/jdbc/jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/apply/login/login.iml" filepath="$PROJECT_DIR$/apply/login/login.iml" />

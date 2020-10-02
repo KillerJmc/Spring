@@ -6,19 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="remember_time" />
-        <module name="transaction" />
-        <module name="mvc" />
-        <module name="xml" />
-        <module name="download" />
-        <module name="servlet" />
-        <module name="aop" />
         <module name="anno" />
-        <module name="login" />
+        <module name="remember_time" />
         <module name="check_code" />
-        <module name="jdbc" />
+        <module name="download" />
+        <module name="login" />
+        <module name="mvc" />
         <module name="apply" />
+        <module name="aop" />
         <module name="practice" />
+        <module name="jdbc" />
+        <module name="check_code_2" />
+        <module name="transaction" />
+        <module name="servlet" />
+        <module name="xml" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +27,7 @@
       <module name="aop" target="14" />
       <module name="apply" target="14" />
       <module name="check_code" target="14" />
+      <module name="check_code_2" target="14" />
       <module name="download" target="14" />
       <module name="jdbc" target="14" />
       <module name="login" target="14" />
