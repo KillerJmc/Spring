@@ -8,7 +8,7 @@ import java.io.IOException;
 @WebServlet("/demo1")
 public class ServletDemo1 implements Servlet {
     /*
-        初始化方法，在Servlet对象创建时执行，且只执行一次。（Servlet对象是单例的！）
+        初始化方法，在Servlet对象创建时（用户访问servlet）执行，且只执行一次。（Servlet对象是单例的！）
      */
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
@@ -40,7 +40,7 @@ public class ServletDemo1 implements Servlet {
     }
 
     /*
-        销毁方法，交代遗言，在Servlet对象被销毁之前时执行，且只执行一次，一般用于释放资源（只有服务器正常关闭时才会被执行）
+        销毁方法，交代遗言，在Servlet对象被销毁之前时（服务器正常停止时）执行，且只执行一次，一般用于释放资源（只有服务器正常关闭时才会被执行）
     */
     @Override
     public void destroy() {

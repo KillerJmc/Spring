@@ -14,13 +14,14 @@
         <option value="$PROJECT_DIR$/transaction/pom.xml" />
         <option value="$PROJECT_DIR$/mvc/pom.xml" />
         <option value="$PROJECT_DIR$/servlet/pom.xml" />
-        <option value="$PROJECT_DIR$/practice/pom.xml" />
         <option value="$PROJECT_DIR$/apply/pom.xml" />
         <option value="$PROJECT_DIR$/apply/login/pom.xml" />
         <option value="$PROJECT_DIR$/apply/check_code/pom.xml" />
         <option value="$PROJECT_DIR$/apply/download/pom.xml" />
         <option value="$PROJECT_DIR$/apply/remember_time/pom.xml" />
         <option value="$PROJECT_DIR$/apply/check_code_2/pom.xml" />
+        <option value="$PROJECT_DIR$/p/pom.xml" />
+        <option value="$PROJECT_DIR$/redis/pom.xml" />
       </list>
     </option>
   </component>

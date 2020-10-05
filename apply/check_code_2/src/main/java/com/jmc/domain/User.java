@@ -1,23 +1,38 @@
 package com.jmc.domain;
 
 public class User {
-    private String username;
+    private int id;
+    private String name;
     private String password;
 
     public User() {
     }
 
-    public User(String username, String password) {
-        this.username = username;
+    public User(String name, String password) {
+        this.name = name;
         this.password = password;
     }
 
-    public String getUsername() {
-        return username;
+    public User(int id, String name, String password) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
@@ -31,7 +46,8 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "username='" + username + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }

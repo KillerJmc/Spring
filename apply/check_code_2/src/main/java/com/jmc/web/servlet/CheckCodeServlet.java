@@ -1,15 +1,23 @@
-<%@ page import="java.awt.image.BufferedImage" %>
-<%@ page import="java.awt.*" %>
-<%@ page import="java.util.Random" %>
-<%@ page import="javax.imageio.ImageIO" %>
-<%@ page import="java.io.ByteArrayOutputStream" %>
-<%@ page contentType="image/jpeg" language="java" %>
-<html>
-<head>
-    <title>CheckCode</title>
-</head>
-<body>
-    <%
+package com.jmc.web.servlet;
+
+import javax.imageio.ImageIO;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.Random;
+
+@WebServlet("/checkCodeServlet")
+public class CheckCodeServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        this.doGet(req, resp);
+    }
+
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int width = 100, height = 50;
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 
@@ -30,7 +38,7 @@
             g.drawString(c + "", width / 5 * i, height /2);
         }
 
-        request.getSession().setAttribute("checkCode", sb.toString());
+        req.getSession().setAttribute("checkCode", sb.toString());
 
         g.setColor(Color.GREEN);
         for (int i = 0; i < 10; i++) {
@@ -40,10 +48,6 @@
             int y2 = r.nextInt(height);
             g.drawLine(x1, y1, x2, y2);
         }
-
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        ImageIO.write(image, "jpg", bos);
-        response.getOutputStream().write(bos.toByteArray());
-    %>
-</body>
-</html>
+        ImageIO.write(image, "jpg", resp.getOutputStream());
+    }
+}

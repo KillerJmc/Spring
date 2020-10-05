@@ -1,0 +1,34 @@
+1. string
+    * set key value
+    * get key
+    * del key
+
+2. hash
+    * hset key field value
+    * hget key field
+    * hgetall key
+    * hdel key field
+
+3. list
+    * lpush key value...
+    * rpush key value...
+    * lrange key start end
+        lrange key 0 -1
+    * lpop key : pop and return
+    * rpop key : pop and return
+
+4. set
+    * sadd key value...
+    * smembers key
+    * srem key value
+
+5. sortedset
+    * zadd key score value: can modify the score repeatedly
+    * zrange key start end (withscores)
+    * zrem key value
+
+6. basic command
+    * keys *
+    * type key
+    * del key
+    

@@ -15,6 +15,8 @@ public class ServletContextDemo1 extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //ServletContext用于所有用户间共享数据，服务器为每个web项目只创建一个此对象
+        //本质是在一个web应用所有servlet对象间共享数据
         ServletContext sc1 = req.getServletContext();
         ServletContext sc2 = this.getServletContext();
         System.out.println(sc1);

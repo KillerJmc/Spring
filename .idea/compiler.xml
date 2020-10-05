@@ -6,18 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="transaction" />
         <module name="anno" />
         <module name="remember_time" />
         <module name="check_code" />
+        <module name="redis" />
+        <module name="p" />
         <module name="download" />
-        <module name="login" />
         <module name="mvc" />
         <module name="apply" />
         <module name="aop" />
-        <module name="practice" />
         <module name="jdbc" />
         <module name="check_code_2" />
-        <module name="transaction" />
+        <module name="login" />
         <module name="servlet" />
         <module name="xml" />
       </profile>
@@ -32,7 +33,11 @@
       <module name="jdbc" target="14" />
       <module name="login" target="14" />
       <module name="mvc" target="14" />
+      <module name="p" target="14" />
+      <module name="p1" target="14" />
+      <module name="p2" target="14" />
       <module name="practice" target="14" />
+      <module name="redis" target="14" />
       <module name="remember_time" target="14" />
       <module name="servlet" target="14" />
       <module name="transaction" target="14" />

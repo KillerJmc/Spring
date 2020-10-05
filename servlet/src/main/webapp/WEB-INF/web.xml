@@ -16,4 +16,27 @@
 <!--        <servlet-name>demo1</servlet-name>-->
 <!--        <url-pattern>/demo1</url-pattern>-->
 <!--    </servlet-mapping>-->
+
+<!--&lt;!&ndash;filter的web.xml配置：谁先配置<filter-mapping>谁先执行&ndash;&gt;-->
+<!--    <filter>-->
+<!--        <filter-name>filter</filter-name>-->
+<!--        <filter-class>com.jmc.filter.FilterDemo1</filter-class>-->
+<!--    </filter>-->
+
+<!--    <filter-mapping>-->
+<!--        <filter-name>filter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--        <dispatcher>FORWARD</dispatcher>-->
+<!--        <dispatcher>REQUEST</dispatcher>-->
+<!--    </filter-mapping>-->
+
+<!--    <listener>-->
+<!--        <listener-class>com.jmc.listener.ServletLoaderListener</listener-class>-->
+<!--    </listener>-->
+<!--    -->
+    <context-param>
+        <param-name>res</param-name>
+        <param-value>/WEB-INF/classes/com/jmc/listener/res.xml</param-value>
+    </context-param>
+
 </web-app>
