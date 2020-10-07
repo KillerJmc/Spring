@@ -43,6 +43,11 @@
           <option name="CONTEXT_PATH" value="/p" />
         </settings>
       </artifact>
+      <artifact name="user_crud:Web exploded">
+        <settings>
+          <option name="CONTEXT_PATH" value="/uc" />
+        </settings>
+      </artifact>
     </deployment>
     <server-settings>
       <option name="BASE_DIRECTORY_NAME" value="Unnamed_Spring_2" />
@@ -111,6 +116,7 @@
         <artifact name="remember_time:Web exploded" />
         <artifact name="check_code_2:Web exploded" />
         <artifact name="p:Web exploded" />
+        <artifact name="user_crud:Web exploded" />
       </option>
     </method>
   </configuration>

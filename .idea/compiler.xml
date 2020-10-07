@@ -11,15 +11,16 @@
         <module name="remember_time" />
         <module name="check_code" />
         <module name="redis" />
-        <module name="p" />
+        <module name="user_crud" />
         <module name="download" />
+        <module name="login" />
         <module name="mvc" />
         <module name="apply" />
         <module name="aop" />
         <module name="jdbc" />
         <module name="check_code_2" />
-        <module name="login" />
         <module name="servlet" />
+        <module name="p" />
         <module name="xml" />
       </profile>
     </annotationProcessing>
@@ -41,6 +42,7 @@
       <module name="remember_time" target="14" />
       <module name="servlet" target="14" />
       <module name="transaction" target="14" />
+      <module name="user_crud" target="14" />
       <module name="xml" target="14" />
     </bytecodeTargetLevel>
   </component>

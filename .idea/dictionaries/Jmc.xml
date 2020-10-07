@@ -2,8 +2,10 @@
   <dictionary name="Jmc">
     <words>
       <w>jbdc</w>
+      <w>jedis</w>
       <w>parms</w>
       <w>tieba</w>
+      <w>zset</w>
     </words>
   </dictionary>
 </component>

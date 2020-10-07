@@ -1,5 +1,6 @@
 1. string
     * set key value
+    * setex key seconds value : set expire
     * get key
     * del key
 
@@ -31,4 +32,7 @@
     * keys *
     * type key
     * del key
-    
+
+7. store mode
+    * RDB: redis database
+    * AOP append only File
