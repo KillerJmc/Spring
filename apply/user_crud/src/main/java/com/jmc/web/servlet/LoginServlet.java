@@ -23,7 +23,6 @@ public class LoginServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
         HttpSession session = req.getSession();
         Map<String, String[]> map = req.getParameterMap();
         UserService userService = new UserServiceImpl();

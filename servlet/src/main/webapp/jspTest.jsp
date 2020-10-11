@@ -6,7 +6,7 @@
 <body>
     <%--定义在service方法中--%>
     <%
-        System.out.println("java: service");
+        System.out.println("java: com.jmc.service");
     %>
 
     <%--定义成员变量--%>

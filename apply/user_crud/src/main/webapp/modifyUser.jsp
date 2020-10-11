@@ -8,10 +8,7 @@
 <body>
     <h2>所有用户信息如下：</h2><br>
     <pre>
-        <%
-            UserService userService = new UserServiceImpl();
-            out.write(userService.getAllText());
-        %>
+        <%= new UserServiceImpl().getAllText(false) %>
     </pre><br>
     <form method="post" action="modifyUserServlet">
         <input type="text" placeholder="修改用户的id" name="id">
@@ -22,7 +19,6 @@
     </form>
 
     ${msg}
-    <% session.removeAttribute("msg"); %>
     <a href="funcMenu.jsp">返回</a>
 </body>
 </html>

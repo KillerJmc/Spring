@@ -43,8 +43,6 @@ public class JdbcConfig {
 
     @Bean
     public PlatformTransactionManager getPlatformTransactionManager() {
-        var t = new DataSourceTransactionManager();
-        t.setDataSource(ds);
-        return t;
+        return new DataSourceTransactionManager(ds);
     }
 }

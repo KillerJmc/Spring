@@ -23,8 +23,6 @@ public class ModifyUserServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
-        resp.setContentType("text/html;charset=utf-8");
         PrintWriter out = resp.getWriter();
         HttpSession session = req.getSession();
 

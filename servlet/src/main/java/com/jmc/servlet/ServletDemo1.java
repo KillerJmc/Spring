@@ -28,7 +28,7 @@ public class ServletDemo1 implements Servlet {
      */
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        System.out.println("service...");
+        System.out.println("com.jmc.service...");
     }
 
     /*

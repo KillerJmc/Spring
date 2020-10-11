@@ -23,7 +23,6 @@ public class RegisterServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
         Map<String, String[]> map = req.getParameterMap();
         UserService userService = new UserServiceImpl();
         HttpSession session = req.getSession();

@@ -13,14 +13,14 @@
         <module name="redis" />
         <module name="user_crud" />
         <module name="download" />
-        <module name="login" />
         <module name="mvc" />
         <module name="apply" />
         <module name="aop" />
+        <module name="p" />
         <module name="jdbc" />
         <module name="check_code_2" />
+        <module name="login" />
         <module name="servlet" />
-        <module name="p" />
         <module name="xml" />
       </profile>
     </annotationProcessing>

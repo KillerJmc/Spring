@@ -9,7 +9,7 @@ public interface UserService {
     boolean contains(User u);
     boolean containsName(String name);
     void add(User u);
-    String getAllText();
+    String getAllText(boolean isAdmin);
     boolean update(User u);
     boolean deleteById(int id);
     boolean deleteByName(String name);

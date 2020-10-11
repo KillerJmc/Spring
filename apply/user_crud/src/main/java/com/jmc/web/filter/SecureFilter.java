@@ -18,12 +18,9 @@ public class SecureFilter implements Filter {
         var req = (HttpServletRequest) request;
         var resp = (HttpServletResponse) response;
 
-        req.setCharacterEncoding("utf-8");
-        resp.setContentType("text/html;charset=utf-8");
         PrintWriter out = resp.getWriter();
         HttpSession session = req.getSession();
 
-        System.out.println(req.getRequestURI());
         if (Strs.orContains(req.getRequestURI(), "index", "login", "register", "invalidAccess")
                 || req.getRequestURI().equals(req.getContextPath() + "/")) {
             chain.doFilter(req, resp);
@@ -37,7 +34,7 @@ public class SecureFilter implements Filter {
                 out.print("<h4>用户：" + u.getName() + "</h4>");
                 chain.doFilter(req, resp);
             } else {
-                resp.sendRedirect(req.getContextPath() + "/invalidAccess.jsp");
+                resp.sendRedirect(req.getContextPath() + "/invalidAccess.html");
             }
         }
     }

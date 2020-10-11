@@ -4,7 +4,6 @@ import com.jmc.dao.UserDao;
 import com.jmc.dao.impl.UserDaoImpl;
 import com.jmc.domain.User;
 import com.jmc.service.UserService;
-import org.junit.Test;
 
 import java.util.List;
 
@@ -33,15 +32,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String getAllText() {
+    public String getAllText(boolean isAdmin) {
         var sb = new StringBuilder("\n");
         List<User> l = getAll();
-        String space = "\t".repeat(10);
-        
-        sb.append("id").append(space).append("姓名").append(space).append("性别\n\n");
+        String space = "\t".repeat(isAdmin ? 6 : 10);
+
+        sb.append("id").append(space).append("姓名");
+        if (isAdmin) sb.append(space).append("密码");
+        sb.append(space).append("性别\n\n");
         l.forEach(u -> {
             sb.append(u.getId()).append(space);
             sb.append(u.getName()).append(space);
+            if (isAdmin) sb.append(u.getPassword()).append(space);
             sb.append(u.getGender()).append(space).append("\n\n");
         });
 

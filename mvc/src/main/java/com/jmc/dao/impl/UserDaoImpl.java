@@ -1,5 +1,6 @@
-package com.jmc.dao;
+package com.jmc.dao.impl;
 
+import com.jmc.dao.UserDao;
 import org.springframework.stereotype.Repository;
 
 @Repository("userDao")
