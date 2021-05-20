@@ -14,18 +14,20 @@ import java.nio.charset.StandardCharsets;
 
 @WebServlet("/downloadServlet")
 public class DownloadServlet extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.doGet(req, resp);
     }
 
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ServletContext context = this.getServletContext();
         String fileName =req.getParameter("fileName");
         String filePath = context.getRealPath("img/" + fileName);
         resp.setContentType(context.getMimeType(fileName));
-        if (req.getParameter("download").equals("true"))
-            //encode防止中文文件名乱码
-            resp.setHeader("content-disposition", "attachment;filename=" + URLEncoder.encode(fileName, StandardCharsets.UTF_8));
+        if ("true".equals(req.getParameter("download"))) {
+            resp.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode(fileName, StandardCharsets.UTF_8));
+        }
         Files.out(filePath, resp.getOutputStream(), true);
         System.out.println(URLEncoder.encode("哈哈.jpg", StandardCharsets.UTF_8));
     }

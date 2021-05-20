@@ -1,6 +1,7 @@
 package com.jmc.request;
 
-import com.jmc.lang.Outs;
+
+import com.jmc.lang.extend.Outs;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

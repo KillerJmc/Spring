@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <writeAnnotations>
+      <writeAnnotation name="com.jmc.anno.WebStaticFieldAutowired" />
+    </writeAnnotations>
+  </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
@@ -14,19 +19,16 @@
         <option value="$PROJECT_DIR$/transaction/pom.xml" />
         <option value="$PROJECT_DIR$/servlet/pom.xml" />
         <option value="$PROJECT_DIR$/apply/pom.xml" />
-        <option value="$PROJECT_DIR$/apply/login/pom.xml" />
-        <option value="$PROJECT_DIR$/apply/check_code/pom.xml" />
         <option value="$PROJECT_DIR$/apply/download/pom.xml" />
-        <option value="$PROJECT_DIR$/apply/remember_time/pom.xml" />
         <option value="$PROJECT_DIR$/apply/check_code_2/pom.xml" />
         <option value="$PROJECT_DIR$/redis/pom.xml" />
-        <option value="$PROJECT_DIR$/apply/user_crud/pom.xml" />
         <option value="$PROJECT_DIR$/mvc/pom.xml" />
         <option value="$PROJECT_DIR$/p/pom.xml" />
+        <option value="$PROJECT_DIR$/apply/user/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_14_PREVIEW" default="false" project-jdk-name="14" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

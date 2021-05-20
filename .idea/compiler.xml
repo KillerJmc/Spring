@@ -2,48 +2,40 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="transaction" />
         <module name="anno" />
-        <module name="remember_time" />
-        <module name="check_code" />
-        <module name="redis" />
-        <module name="user_crud" />
-        <module name="download" />
-        <module name="mvc" />
-        <module name="apply" />
         <module name="aop" />
-        <module name="p" />
-        <module name="jdbc" />
-        <module name="check_code_2" />
-        <module name="login" />
+        <module name="apply" />
         <module name="servlet" />
+        <module name="jdbc" />
+        <module name="redis" />
+        <module name="p" />
+        <module name="download" />
         <module name="xml" />
+        <module name="mvc" />
+        <module name="user" />
+        <module name="transaction" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="anno" target="14" />
-      <module name="aop" target="14" />
-      <module name="apply" target="14" />
-      <module name="check_code" target="14" />
-      <module name="check_code_2" target="14" />
-      <module name="download" target="14" />
-      <module name="jdbc" target="14" />
-      <module name="login" target="14" />
-      <module name="mvc" target="14" />
-      <module name="p" target="14" />
-      <module name="p1" target="14" />
-      <module name="p2" target="14" />
-      <module name="practice" target="14" />
-      <module name="redis" target="14" />
-      <module name="remember_time" target="14" />
-      <module name="servlet" target="14" />
-      <module name="transaction" target="14" />
-      <module name="user_crud" target="14" />
-      <module name="xml" target="14" />
+      <module name="anno" target="16" />
+      <module name="aop" target="16" />
+      <module name="apply" target="15" />
+      <module name="download" target="16" />
+      <module name="jdbc" target="16" />
+      <module name="login" target="16" />
+      <module name="mvc" target="16" />
+      <module name="p" target="16" />
+      <module name="redis" target="16" />
+      <module name="servlet" target="16" />
+      <module name="transaction" target="16" />
+      <module name="user" target="16" />
+      <module name="user_crud" target="16" />
+      <module name="xml" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>

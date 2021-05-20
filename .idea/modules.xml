@@ -6,18 +6,14 @@
       <module fileurl="file://$PROJECT_DIR$/anno/anno.iml" filepath="$PROJECT_DIR$/anno/anno.iml" />
       <module fileurl="file://$PROJECT_DIR$/aop/aop.iml" filepath="$PROJECT_DIR$/aop/aop.iml" />
       <module fileurl="file://$PROJECT_DIR$/apply/apply.iml" filepath="$PROJECT_DIR$/apply/apply.iml" />
-      <module fileurl="file://$PROJECT_DIR$/apply/check_code/check_code.iml" filepath="$PROJECT_DIR$/apply/check_code/check_code.iml" />
-      <module fileurl="file://$PROJECT_DIR$/apply/check_code_2/check_code_2.iml" filepath="$PROJECT_DIR$/apply/check_code_2/check_code_2.iml" />
       <module fileurl="file://$PROJECT_DIR$/apply/download/download.iml" filepath="$PROJECT_DIR$/apply/download/download.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/jdbc/jdbc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/apply/login/login.iml" filepath="$PROJECT_DIR$/apply/login/login.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvc/mvc.iml" filepath="$PROJECT_DIR$/mvc/mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/p/p.iml" filepath="$PROJECT_DIR$/p/p.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/apply/remember_time/remember_time.iml" filepath="$PROJECT_DIR$/apply/remember_time/remember_time.iml" />
       <module fileurl="file://$PROJECT_DIR$/servlet/servlet.iml" filepath="$PROJECT_DIR$/servlet/servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/transaction/transaction.iml" filepath="$PROJECT_DIR$/transaction/transaction.iml" />
-      <module fileurl="file://$PROJECT_DIR$/apply/user_crud/user_crud.iml" filepath="$PROJECT_DIR$/apply/user_crud/user_crud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apply/user/user.iml" filepath="$PROJECT_DIR$/apply/user/user.iml" />
       <module fileurl="file://$PROJECT_DIR$/xml/xml.iml" filepath="$PROJECT_DIR$/xml/xml.iml" />
     </modules>
   </component>

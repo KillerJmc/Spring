@@ -4,11 +4,11 @@
     * get key
     * del key
 
-2. hash
-    * hset key field value
-    * hget key field
+2. hash(map)
+    * hset key field(map-key) value
+    * hget key field(map-key)
     * hgetall key
-    * hdel key field
+    * hdel key field(map-key)
 
 3. list
     * lpush key value...
