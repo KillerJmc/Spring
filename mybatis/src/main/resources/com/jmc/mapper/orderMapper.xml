@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.jmc.mapper.OrderMapper">
+    <resultMap id="orderMap" type="order">
+        <id column="oid" property="id"/>
+        <result column="total" property="total"/>
+        <association property="stu" javaType="stu">
+            <id column="sid" property="id"/>
+            <result column="name" property="name"/>
+            <result column="password" property="password"/>
+        </association>
+    </resultMap>
+
+    <select id="getAllWithStu" resultMap="orderMap">
+        select
+                *, o.id oid
+        from
+                orders o, stu s
+        where
+                s.id=sid
+    </select>
+</mapper>

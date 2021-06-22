@@ -1,105 +1,129 @@
 package com.jmc.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jmc.domain.User;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
-/**
- * @author Jmc
- */
 @Controller
-@RequestMapping("/user")
 public class UserController {
-    @RequestMapping(value = {"/save"},
-                    method = {RequestMethod.GET},
-                    //提交时一定要含的参数
-                    params = {"name"})
-    public String save() {
-        System.out.println("Controller save running...");
-        //直接跳转(默认时forward:)
-//        return "redirect:/jsp/success.jsp";
-        return "success";
+    /**
+     * 默认通过forward方式跳转
+     * @return 跳转到的网页
+     */
+    @RequestMapping("/quick")
+    public String hello() {
+        System.out.println("UserController.save running...");
+        return "success.html";
     }
 
-    @RequestMapping("/save2")
-    public ModelAndView save2() {
-        //model: 模型 用于封装数据
-        //view: 视图 用于展示数据
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("name", "Jmc");
-        modelAndView.setViewName("success");
-        return modelAndView;
+    /**
+     * 通过redirect方式跳转
+     * @return 跳转到的网页
+     */
+    @RequestMapping("/quick2")
+    public String hello2() {
+        System.out.println("UserController.save running...");
+        return "redirect:success.html";
     }
 
-    @RequestMapping("/save3")
-    public ModelAndView save3(ModelAndView modelAndView) {
-        modelAndView.addObject("name", "Jmc");
-        modelAndView.setViewName("success");
-        return modelAndView;
-    }
-
-    @RequestMapping("/save4")
-    public String save4(Model m) {
-        m.addAttribute("name", "Lucy");
-        return "success";
-    }
-
-    //行不通
-    @RequestMapping("/save5")
-    public String save5(ModelAndView m) {
-        m.addObject("name", "Lucy");
-        return "success";
-    }
-
-    @RequestMapping("/save6")
-    public String save6(HttpServletRequest req) {
-        req.setAttribute("name", "Kitty");
-        return "success";
-    }
-
-    @RequestMapping("/save7")
-    public void save7(HttpServletResponse resp) throws IOException {
-        resp.getWriter().print("OKSIR!!!");
-    }
-
-    @RequestMapping("/save8")
+    /**
+     * 打印并解决输出乱码问题
+     * @return 打印内容
+     */
+    @RequestMapping(value = "/print", produces = "text/plain;charset=UTF-8")
     @ResponseBody
-    public String save8() {
-        return "<h1>Haha</h1>";
+    public String printSth() {
+        return "兄弟们666";
     }
 
-    @RequestMapping("/save9")
+    @RequestMapping("/user1")
     @ResponseBody
-    public String save9() throws JsonProcessingException {
-        return new ObjectMapper().writeValueAsString(new User("Jmc", "123"));
+    public void user(String name, int id) {
+        // 注意须在web.xml配置listener解决获取post请求数据的乱码问题
+        System.out.println("name = " + name);
+        System.out.println("id = " + id);
     }
 
-    @RequestMapping("/save10")
+    @RequestMapping("/user2")
     @ResponseBody
-    //要在mvc配置文件中配置
-    public User save10() {
-        return new User("Jmc", "456");
+    public void user2(@RequestParam(name = "username") String name,
+                      @RequestParam(name = "userId", required = false, defaultValue = "123") int id) {
+        System.out.println("name = " + name);
+        System.out.println("id = " + id);
     }
 
-    @RequestMapping("/save11")
+    /**
+     * Restful风格，从地址上，用GET，POST，DELETE等请求实现不同风格
+     * @param id 要获取的用户对应的编号
+     */
+    @RequestMapping(value = "/user3/{id}", method = RequestMethod.GET)
     @ResponseBody
-    //要在mvc配置文件中配置
-    public List<?> save11() {
-        return List.of(new User("Lucy", "666"));
+    public void user3(@PathVariable int id) {
+        System.out.println("id = " + id);
     }
 
+    @Data
+    @AllArgsConstructor
+    static class User {
+        String name;
+        int id;
+    }
 
+    /**
+     * 返回json格式字符串（注意要导入jackson包并且要写 mvc:annotation-driven）
+     * @return json格式字符串
+     */
+    @RequestMapping("/user4")
+    @ResponseBody
+    public List<User> user4() {
+        return List.of(
+                new User("Jmc", 18),
+                new User("Lucy", 16),
+                new User("Jerry", 40)
+        );
+    }
 
+    @RequestMapping("/save")
+    @ResponseBody
+    public void save(@RequestHeader(value = "User-Agent", required = false) String userAgent,
+                     @CookieValue("JSESSIONID") String jSessionID) {
+        System.out.println("userAgent = " + userAgent);
+        System.out.println("jSessionID = " + jSessionID);
+    }
 
+    /**
+     * 登录
+     */
+    @RequestMapping(value = "/login", produces = "text/plain;charset=UTF-8")
+    public String login(String name, String password, HttpSession session) {
+        if ("Jmc".equals(name) && "0189".equals(password)) {
+            session.setAttribute("u", "Jmc");
+            return "/func";
+        } else {
+            // 抛出异常，配置简单异常映射器解决
+            throw new RuntimeException("无此用户！！！");
+        }
+    }
+
+    /**
+     * 出异常时跳转的页面
+     */
+    @RequestMapping(value = "/error", produces = "text/plain;charset=UTF-8")
+    @ResponseBody
+    public String error() {
+        return "服务器异常！（运行时异常）";
+    }
+
+    /**
+     * 前往功能列表，前提是进行上面的登录操作（有FuncInterceptor进行拦截）
+     */
+    @RequestMapping(value = "/func", produces = "text/plain;charset=UTF-8")
+    @ResponseBody
+    public String func(HttpSession session) {
+        return "欢迎你，%s! 功能如下。".formatted(session.getAttribute("u"));
+    }
 }

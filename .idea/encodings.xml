@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/apply/hhj/src/main/java/com/jmc/web/filter/LoginFilter.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/wtf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apply/user-boot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-plus/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-actuator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-admin/spring-boot-admin-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-admin/spring-boot-admin-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-autoconfig/my-redis-test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-autoconfig/redis-spring-boot-autoconfigure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-autoconfig/redis-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-cache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot/src/main/java" charset="UTF-8" />
   </component>
 </project>

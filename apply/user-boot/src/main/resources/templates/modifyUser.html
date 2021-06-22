@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户</title>
+</head>
+<body>
+    <h1 style="text-align:center">修改用户信息</h1></body>
+
+    <pre style="font-size: 20px" th:text="${userTable}">
+    暂无用户信息
+    </pre>
+
+    <br><br>
+    <pre style="font-size:20px;color:#FF0000">
+    提示：
+    1）修改：通过输入用户的id，并输入用户的新姓名，新年龄，新密码，最后点击修改按钮。
+    2）删除：通过输入用户的id或姓名，最后点击删除按钮。
+    </pre>
+
+    <br><br>
+
+    <form action="update" method="post">
+        <label>
+            <input name="id" type="text" style="font-size:15px" placeholder="id"><br>
+            <input name="name" type="text" style="font-size:15px" placeholder="新姓名"><br>
+            <input name="age" type="text" style="font-size:15px" placeholder="新年龄"><br>
+            <input name="password" type="text" style="font-size:15px" placeholder="新密码"><br>
+            <input type="submit" style="font-size:15px" value="修改"/>
+        </label>
+    </form>
+
+    <br><br>
+
+    <form action="deleteById" method="post">
+        <label>
+            <input name="id" type="text" style="font-size:15px" placeholder="id">
+            <input type="submit" style="font-size:15px" value="删除"/>
+        </label>
+    </form>
+
+    <br><br>
+
+    <form action="deleteByName" method="post">
+        <label>
+            <input name="name" type="text" style="font-size:15px" placeholder="姓名">
+            <input type="submit" style="font-size:15px" value="删除"/>
+        </label>
+    </form>
+
+
+
+    <br><br>
+
+    <a href="func.html" style="font-size:20px;">返回主菜单</a>
+
+    <br>
+</html>

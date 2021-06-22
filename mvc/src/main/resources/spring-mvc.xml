@@ -7,21 +7,26 @@
 
     <context:component-scan base-package="com.jmc.controller"/>
 
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/jsp/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
-
-<!--    <bean id="adapter" class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
-<!--        <property name="messageConverters">-->
-<!--            <list>-->
-<!--                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>-->
-<!--            </list>-->
-<!--        </property>-->
-<!--    </bean>-->
-
-    <!--mvc的注解驱动-->
-    <!--它会自动加载 处理映射器，处理器适配器和视图解析器(RequestMappingHandlerMapping, RequestMappingHandlerAdapter, ViewResolver)-->
-    <!--这SpringMVC的三大组件，且还会默认底层集成Jackson进行对象或集合的json格式字符串的转换-->
+    <!-- 配置注解驱动 -->
     <mvc:annotation-driven/>
+    <!-- 放开对非mvc资源的限制，使用初始servlet配置 -->
+    <mvc:default-servlet-handler/>
+
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/func"/>
+            <bean class="com.jmc.config.interceptor.FuncInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!-- 简单异常映射器 -->
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <!--<property name="defaultErrorView" value=""/>-->
+        <property name="exceptionMappings">
+            <map>
+                <entry key="java.lang.RuntimeException" value="/error"/>
+            </map>
+        </property>
+    </bean>
 </beans>

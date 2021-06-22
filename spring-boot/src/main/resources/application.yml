@@ -1,0 +1,20 @@
+# port
+server:
+  port: 80
+
+spring:
+  # datasource（mybatis用）
+  datasource:
+    url: jdbc:mysql:///jmc?serverTimeZone=UTC
+    username: root
+    password: root
+
+  # redis（本机无需配置）
+  # redis:
+    # host: localhost
+    # port: 6379
+
+# mybatis xml
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.jmc.domain

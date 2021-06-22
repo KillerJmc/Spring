@@ -22,9 +22,30 @@
         <option value="$PROJECT_DIR$/apply/download/pom.xml" />
         <option value="$PROJECT_DIR$/apply/check_code_2/pom.xml" />
         <option value="$PROJECT_DIR$/redis/pom.xml" />
-        <option value="$PROJECT_DIR$/mvc/pom.xml" />
-        <option value="$PROJECT_DIR$/p/pom.xml" />
         <option value="$PROJECT_DIR$/apply/user/pom.xml" />
+        <option value="$PROJECT_DIR$/mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-anno/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-auto-config/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-autoconfig/redis-spring-boot-autoconfigure/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-autoconfig/redis-spring-boot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-autoconfig/my-redis-test/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/user-spring-boot-autoconfigure/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/user-spring-boot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/user-test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-actuator/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/spring-boot-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin/spring-boot-admin-server/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin/spring-boot-admin-server/spring-boot-admin-client/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin/spring-boot-admin-client/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-cache/pom.xml" />
+        <option value="$PROJECT_DIR$/demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/yoyoyo/pom.xml" />
+        <option value="$PROJECT_DIR$/apply/user-boot/pom.xml" />
       </list>
     </option>
   </component>

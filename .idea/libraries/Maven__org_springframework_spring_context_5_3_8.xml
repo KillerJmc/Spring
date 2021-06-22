@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework:spring-context:5.3.8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Maven/repository/org/springframework/spring-context/5.3.8/spring-context-5.3.8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../Maven/repository/org/springframework/spring-context/5.3.8/spring-context-5.3.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../Maven/repository/org/springframework/spring-context/5.3.8/spring-context-5.3.8-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Maven/repository/org/springframework/spring-context/5.3.7/spring-context-5.3.7-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Maven/repository/org/springframework/spring-context/5.3.7/spring-context-5.3.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

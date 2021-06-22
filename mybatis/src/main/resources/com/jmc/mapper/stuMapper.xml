@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="StuAnnoMapper">
+    <resultMap id="stuMapper" type="stu">
+        <id column="sid" property="id"/>
+        <result column="name" property="name"/>
+        <result column="password" property="password"/>
+        <collection property="orderList" ofType="order">
+            <id column="oid" property="id"/>
+            <result column="total" property="total"/>
+        </collection>
+    </resultMap>
+
+    <select id="getAllWithOrders" resultMap="stuMapper">
+        select
+                *, o.id oid
+        from
+                stu s, orders o
+        where
+                s.id=sid
+        order by
+                sid
+    </select>
+
+    <resultMap id="roleMapper" type="stu">
+        <id column="stu_id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="password" property="password"/>
+        <collection property="roleList" ofType="role">
+            <id column="role_id" property="id"/>
+            <result column="name" property="name"/>
+        </collection>
+    </resultMap>
+
+    <select id="getAllWithRoles" resultMap="roleMapper">
+        select
+                *
+        from
+                stu s, role r, stu_role sr
+        where
+                s.id=stu_id and r.id=role_id
+    </select>
+
+    <select id="findStu" resultType="stu">
+        select * from stu
+        <where>
+            <if test="id != 0">
+                and id=#{id}
+            </if>
+
+            <if test="name != null">
+                and name=#{name}
+            </if>
+
+            <if test="password != null">
+                and password=#{password}
+            </if>
+        </where>
+    </select>
+
+    <select id="getStuByIds" resultType="stu">
+        select * from stu
+        <where>
+            <foreach collection="list" open="id in(" close=")" separator="," item="id">
+                #{id}
+            </foreach>
+        </where>
+    </select>
+
+    <select id="getAllStu" resultType="stu">
+        select * from stu
+    </select>
+
+    <insert id="saveStu" parameterType="stu">
+        insert into stu(name, password) values(#{name}, #{password})
+    </insert>
+
+    <update id="updateStuById" parameterType="stu">
+        update stu set name=#{name}, password=#{password} where id=#{id}
+    </update>
+
+    <delete id="deleteStuById" parameterType="int">
+        delete from stu where id=#{id}
+    </delete>
+</mapper>

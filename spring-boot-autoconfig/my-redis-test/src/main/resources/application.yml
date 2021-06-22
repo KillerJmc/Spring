@@ -1,0 +1,3 @@
+redis:
+  host: localship
+  port: 3306
