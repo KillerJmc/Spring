@@ -7,7 +7,7 @@ import com.jmc.pojo.Admin;
 import com.jmc.pojo.User;
 import com.jmc.service.AdminService;
 import com.jmc.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,19 +21,10 @@ import javax.servlet.http.HttpSession;
  * @author Jmc
  */
 @RestController
+@RequiredArgsConstructor
 public class UserController extends BaseController {
-    private UserService userService;
-    private AdminService adminService;
-
-    @Autowired
-    public void setUserService(UserService userService) {
-        this.userService = userService;
-    }
-
-    @Autowired
-    public void setAdminService(AdminService adminService) {
-        this.adminService = adminService;
-    }
+    private final UserService userService;
+    private final AdminService adminService;
 
     @PostMapping("/register")
     public ModelAndView register(@Validated(Group.Insert.class) User u, HttpSession session) {

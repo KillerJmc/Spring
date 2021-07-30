@@ -1,14 +1,14 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="16">
     <option name="OPEN_IN_BROWSER" value="false" />
-    <option name="OPEN_IN_BROWSER_URL" value="http://localhost/ssm/" />
+    <option name="OPEN_IN_BROWSER_URL" value="http://localhost/user_Web_exploded/" />
     <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
     <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
     <option name="UPDATING_POLICY" value="restart-server" />
     <deployment>
-      <artifact name="ssm:Web exploded">
+      <artifact name="user:Web exploded">
         <settings>
-          <option name="CONTEXT_PATH" value="/ssm" />
+          <option name="CONTEXT_PATH" value="/" />
         </settings>
       </artifact>
     </deployment>
@@ -86,7 +86,9 @@
     </ConfigurationWrapper>
     <method v="2">
       <option name="Make" enabled="true" />
-      <option name="BuildArtifacts" enabled="false" />
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="user:Web exploded" />
+      </option>
     </method>
   </configuration>
 </component>

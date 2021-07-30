@@ -1,9 +1,7 @@
 package com.jmc.web;
 
-import com.alibaba.druid.pool.DruidDataSource;
 import com.jmc.config.SpringConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.sql.DataSource;
 

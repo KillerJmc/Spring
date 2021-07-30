@@ -1,28 +1,29 @@
 package com.jmc.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.jmc.common.Const;
 import com.jmc.config.exception.MsgException;
 import com.jmc.mapper.UserMapper;
 import com.jmc.pojo.User;
 import com.jmc.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.*;
+import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Jmc
  */
 @Service
+@RequiredArgsConstructor
 @CacheConfig(cacheNames = Const.USER_CACHE)
 public class UserServiceImpl implements UserService {
-    private UserMapper userMapper;
-
-    @Autowired
-    public void setUserMapper(UserMapper userMapper) {
-        this.userMapper = userMapper;
-    }
+    private final UserMapper userMapper;
 
     @Override
     @Cacheable(key = "#id", unless = "#result == null")
@@ -33,13 +34,14 @@ public class UserServiceImpl implements UserService {
     @Override
     @Cacheable(key = "#name", unless = "#result == null")
     public User getByName(String name) {
-        return userMapper.getByName(name);
+        var res = userMapper.selectByMap(Map.of("name", name));
+        return res.isEmpty() ? null : res.get(0);
     }
 
     @Override
     @Cacheable(key = "#u.name", unless = "#result == null")
     public User getByNameAndPassword(User u) {
-        return userMapper.getByNameAndPassword(u);
+        return userMapper.selectOne(new QueryWrapper<>(u));
     }
 
     @Override
@@ -109,7 +111,7 @@ public class UserServiceImpl implements UserService {
             throw new MsgException("删除的用户名不存在");
         }
 
-        userMapper.deleteByName(name);
+        userMapper.deleteByMap(Map.of("name", name));
         return deletedUser;
     }
 

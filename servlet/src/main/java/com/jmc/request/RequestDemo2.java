@@ -1,15 +1,11 @@
 package com.jmc.request;
 
-import com.jmc.io.Streams;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Enumeration;
 
 @WebServlet("/req2")
 public class RequestDemo2 extends HttpServlet {
@@ -30,6 +26,6 @@ public class RequestDemo2 extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=utf-8");
 //        BufferedReader br = req.getReader();
-        resp.getWriter().println(Streams.readToStr(req.getInputStream()));
+        resp.getWriter().println(new String(req.getInputStream().readAllBytes()));
     }
 }

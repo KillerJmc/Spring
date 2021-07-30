@@ -1,7 +1,6 @@
 package com.jmc.dao;
 
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 //<bean id="userDao" class="com.jmc.dao.UserDaoImpl"/>

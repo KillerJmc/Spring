@@ -3,7 +3,6 @@ package com.jmc.web;
 import com.jmc.config.SpringConfiguration;
 import com.jmc.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UserController {
     public static void main(String[] args) {

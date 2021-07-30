@@ -1,16 +1,11 @@
 package com.jmc.request;
 
-import com.jmc.io.Streams;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Enumeration;
-import java.util.Map;
 
 @WebServlet("/req3")
 public class RequestDemo3 extends HttpServlet {

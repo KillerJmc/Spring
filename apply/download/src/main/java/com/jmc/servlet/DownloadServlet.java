@@ -28,7 +28,9 @@ public class DownloadServlet extends HttpServlet {
         if ("true".equals(req.getParameter("download"))) {
             resp.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode(fileName, StandardCharsets.UTF_8));
         }
-        Files.out(filePath, resp.getOutputStream(), true);
+        var out = resp.getOutputStream();
+        out.write(Files.readToBytes(filePath));
+        out.close();
         System.out.println(URLEncoder.encode("哈哈.jpg", StandardCharsets.UTF_8));
     }
 }
