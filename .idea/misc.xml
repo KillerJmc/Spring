@@ -15,7 +15,6 @@
         <option value="$PROJECT_DIR$/xml/pom.xml" />
         <option value="$PROJECT_DIR$/anno/pom.xml" />
         <option value="$PROJECT_DIR$/aop/pom.xml" />
-        <option value="$PROJECT_DIR$/jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/transaction/pom.xml" />
         <option value="$PROJECT_DIR$/servlet/pom.xml" />
         <option value="$PROJECT_DIR$/apply/pom.xml" />
@@ -25,7 +24,6 @@
         <option value="$PROJECT_DIR$/apply/user/pom.xml" />
         <option value="$PROJECT_DIR$/mvc/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-anno/pom.xml" />
         <option value="$PROJECT_DIR$/ssm/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis-plus/pom.xml" />
@@ -36,7 +34,6 @@
         <option value="$PROJECT_DIR$/demo/user-spring-boot-autoconfigure/pom.xml" />
         <option value="$PROJECT_DIR$/demo/user-spring-boot-starter/pom.xml" />
         <option value="$PROJECT_DIR$/demo/user-test/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot-actuator/pom.xml" />
         <option value="$PROJECT_DIR$/demo/spring-boot-admin/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-admin/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-admin/spring-boot-admin-server/pom.xml" />
@@ -46,6 +43,11 @@
         <option value="$PROJECT_DIR$/demo1/pom.xml" />
         <option value="$PROJECT_DIR$/demo/yoyoyo/pom.xml" />
         <option value="$PROJECT_DIR$/apply/user-boot/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-anno/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-xml/pom.xml" />
       </list>
     </option>
   </component>

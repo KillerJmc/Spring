@@ -8,43 +8,39 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="user-boot" />
-        <module name="anno" />
-        <module name="aop" />
+        <module name="spring-mvc" />
         <module name="servlet" />
         <module name="mybatis" />
-        <module name="jdbc" />
         <module name="redis-spring-boot-starter" />
         <module name="ssm" />
         <module name="redis" />
-        <module name="spring-boot-actuator" />
+        <module name="spring-xml" />
         <module name="download" />
         <module name="spring-boot-autoconfig" />
-        <module name="xml" />
         <module name="spring-boot-cache" />
-        <module name="mvc" />
+        <module name="spring-aop" />
         <module name="redis-spring-boot-autoconfigure" />
         <module name="my-redis-test" />
-        <module name="spring-boot-admin-client" />
         <module name="apply" />
         <module name="spring-anno" />
-        <module name="spring-boot-admin-server" />
+        <module name="spring-transaction" />
         <module name="spring-boot" />
         <module name="user" />
         <module name="mybatis-plus" />
-        <module name="transaction" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="anno" target="16" />
-      <module name="aop" target="16" />
       <module name="apply" target="15" />
       <module name="code-maker" target="16" />
       <module name="demo" target="16" />
       <module name="demsf" target="16" />
+      <module name="docker" target="16" />
+      <module name="docker-demo" target="16" />
+      <module name="docker-springboot-mysql-test" target="16" />
       <module name="download" target="16" />
       <module name="jdbc" target="16" />
       <module name="jiji" target="16" />
-      <module name="mvc" target="16" />
       <module name="my-redis-test" target="16" />
       <module name="mybatis" target="16" />
       <module name="mybatis-anno" target="16" />
@@ -57,22 +53,24 @@
       <module name="redis-spring-boot-starter" target="16" />
       <module name="servlet" target="16" />
       <module name="spring-anno" target="16" />
+      <module name="spring-aop" target="16" />
       <module name="spring-boot" target="16" />
       <module name="spring-boot-actuator" target="16" />
       <module name="spring-boot-admin" target="16" />
-      <module name="spring-boot-admin-client" target="16" />
-      <module name="spring-boot-admin-server" target="16" />
+      <module name="spring-boot-admin-client" target="1.8" />
+      <module name="spring-boot-admin-server" target="1.8" />
       <module name="spring-boot-autoconfig" target="16" />
       <module name="spring-boot-cache" target="16" />
+      <module name="spring-mvc" target="16" />
+      <module name="spring-transaction" target="16" />
+      <module name="spring-xml" target="16" />
       <module name="springboot-init" target="16" />
       <module name="ssm" target="16" />
-      <module name="transaction" target="16" />
       <module name="user" target="16" />
       <module name="user-boot" target="16" />
       <module name="user-spring-boot-autoconfigure" target="16" />
       <module name="user-spring-boot-starter" target="16" />
       <module name="user-test" target="16" />
-      <module name="xml" target="16" />
       <module name="yoyo" target="16" />
     </bytecodeTargetLevel>
   </component>
@@ -81,6 +79,9 @@
       <module name="code-maker" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="demsf" options="-parameters" />
+      <module name="docker" options="-parameters" />
+      <module name="docker-demo" options="-parameters" />
+      <module name="docker-springboot-mysql-test" options="-parameters" />
       <module name="jiji" options="-parameters" />
       <module name="my-redis-test" options="-parameters" />
       <module name="mybatis-plus" options="-parameters" />
