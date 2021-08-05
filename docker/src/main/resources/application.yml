@@ -1,0 +1,9 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    # connect to docker-compose service 'mysql'
+    url: jdbc:mysql://mysql:3306/jmc
+    username: root
+    password: root

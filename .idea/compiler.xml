@@ -9,24 +9,25 @@
         <outputRelativeToContentRoot value="true" />
         <module name="user-boot" />
         <module name="spring-mvc" />
+        <module name="apply" />
+        <module name="spring-anno" />
         <module name="servlet" />
         <module name="mybatis" />
         <module name="redis-spring-boot-starter" />
         <module name="ssm" />
         <module name="redis" />
         <module name="spring-xml" />
+        <module name="docker" />
         <module name="download" />
         <module name="spring-boot-autoconfig" />
+        <module name="spring-transaction" />
         <module name="spring-boot-cache" />
+        <module name="spring-boot" />
         <module name="spring-aop" />
         <module name="redis-spring-boot-autoconfigure" />
-        <module name="my-redis-test" />
-        <module name="apply" />
-        <module name="spring-anno" />
-        <module name="spring-transaction" />
-        <module name="spring-boot" />
         <module name="user" />
         <module name="mybatis-plus" />
+        <module name="my-redis-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

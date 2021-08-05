@@ -48,6 +48,7 @@
         <option value="$PROJECT_DIR$/spring-mvc/pom.xml" />
         <option value="$PROJECT_DIR$/spring-transaction/pom.xml" />
         <option value="$PROJECT_DIR$/spring-xml/pom.xml" />
+        <option value="$PROJECT_DIR$/docker/pom.xml" />
       </list>
     </option>
   </component>

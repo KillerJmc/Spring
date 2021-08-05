@@ -1,13 +1,13 @@
 <component name="libraryTable">
-  <library name="Maven: junit:junit:4.13">
+  <library name="Maven: org.springframework:spring-context:5.3.6">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../Maven/repository/junit/junit/4.13/junit-4.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Maven/repository/org/springframework/spring-context/5.3.6/spring-context-5.3.6.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/../../../Maven/repository/junit/junit/4.13/junit-4.13-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Maven/repository/org/springframework/spring-context/5.3.6/spring-context-5.3.6-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../../../Maven/repository/junit/junit/4.13/junit-4.13-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Maven/repository/org/springframework/spring-context/5.3.6/spring-context-5.3.6-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

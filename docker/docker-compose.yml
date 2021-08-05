@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  spring-boot:
+    # build Dockerfile
+    build: .
+    # image name
+    image: spring-boot
+    # mysql run first
+    depends_on:
+      - mysql
+    # expose port
+    ports:
+      - '80:80'
+
+  mysql:
+    image: mysql
+    # specify volumes
+    volumes:
+      - '/home/jmc/mysql:/var/lib/mysql'
+
+
