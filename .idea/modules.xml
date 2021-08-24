@@ -3,12 +3,16 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Spring.iml" filepath="$PROJECT_DIR$/.idea/Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq/ack/ack.iml" filepath="$PROJECT_DIR$/rabbitmq/ack/ack.iml" />
       <module fileurl="file://$PROJECT_DIR$/apply/apply.iml" filepath="$PROJECT_DIR$/apply/apply.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq/confirm/confirm.iml" filepath="$PROJECT_DIR$/rabbitmq/confirm/confirm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq/delay/delay.iml" filepath="$PROJECT_DIR$/rabbitmq/delay/delay.iml" />
       <module fileurl="file://$PROJECT_DIR$/docker/docker.iml" filepath="$PROJECT_DIR$/docker/docker.iml" />
       <module fileurl="file://$PROJECT_DIR$/apply/download/download.iml" filepath="$PROJECT_DIR$/apply/download/download.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-autoconfig/my-redis-test/my-redis-test.iml" filepath="$PROJECT_DIR$/spring-boot-autoconfig/my-redis-test/my-redis-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis-plus/mybatis-plus.iml" filepath="$PROJECT_DIR$/mybatis-plus/mybatis-plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq/rabbitmq.iml" filepath="$PROJECT_DIR$/rabbitmq/rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-autoconfig/redis-spring-boot-autoconfigure/redis-spring-boot-autoconfigure.iml" filepath="$PROJECT_DIR$/spring-boot-autoconfig/redis-spring-boot-autoconfigure/redis-spring-boot-autoconfigure.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-autoconfig/redis-spring-boot-starter/redis-spring-boot-starter.iml" filepath="$PROJECT_DIR$/spring-boot-autoconfig/redis-spring-boot-starter/redis-spring-boot-starter.iml" />

@@ -9,10 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="user-boot" />
         <module name="spring-mvc" />
-        <module name="apply" />
-        <module name="spring-anno" />
         <module name="servlet" />
         <module name="mybatis" />
+        <module name="ack" />
         <module name="redis-spring-boot-starter" />
         <module name="ssm" />
         <module name="redis" />
@@ -20,35 +19,36 @@
         <module name="docker" />
         <module name="download" />
         <module name="spring-boot-autoconfig" />
-        <module name="spring-transaction" />
         <module name="spring-boot-cache" />
-        <module name="spring-boot" />
         <module name="spring-aop" />
         <module name="redis-spring-boot-autoconfigure" />
+        <module name="my-redis-test" />
+        <module name="apply" />
+        <module name="spring-anno" />
+        <module name="confirm" />
+        <module name="spring-transaction" />
+        <module name="delay" />
+        <module name="spring-boot" />
         <module name="user" />
         <module name="mybatis-plus" />
-        <module name="my-redis-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="anno" target="16" />
+      <module name="ack" target="16" />
       <module name="apply" target="15" />
-      <module name="code-maker" target="16" />
+      <module name="confirm" target="16" />
+      <module name="delay" target="16" />
+      <module name="delayed" target="16" />
       <module name="demo" target="16" />
-      <module name="demsf" target="16" />
       <module name="docker" target="16" />
-      <module name="docker-demo" target="16" />
-      <module name="docker-springboot-mysql-test" target="16" />
       <module name="download" target="16" />
-      <module name="jdbc" target="16" />
-      <module name="jiji" target="16" />
       <module name="my-redis-test" target="16" />
       <module name="mybatis" target="16" />
-      <module name="mybatis-anno" target="16" />
       <module name="mybatis-plus" target="16" />
-      <module name="p" target="16" />
-      <module name="p1" target="16" />
-      <module name="p2" target="16" />
+      <module name="oksir" target="11" />
+      <module name="rabbitmq" target="16" />
+      <module name="rabbitmq-boot" target="16" />
+      <module name="rabbitmq0" target="16" />
       <module name="redis" target="16" />
       <module name="redis-spring-boot-autoconfigure" target="16" />
       <module name="redis-spring-boot-starter" target="16" />
@@ -56,49 +56,34 @@
       <module name="spring-anno" target="16" />
       <module name="spring-aop" target="16" />
       <module name="spring-boot" target="16" />
-      <module name="spring-boot-actuator" target="16" />
-      <module name="spring-boot-admin" target="16" />
-      <module name="spring-boot-admin-client" target="1.8" />
-      <module name="spring-boot-admin-server" target="1.8" />
       <module name="spring-boot-autoconfig" target="16" />
       <module name="spring-boot-cache" target="16" />
       <module name="spring-mvc" target="16" />
       <module name="spring-transaction" target="16" />
       <module name="spring-xml" target="16" />
-      <module name="springboot-init" target="16" />
       <module name="ssm" target="16" />
       <module name="user" target="16" />
       <module name="user-boot" target="16" />
-      <module name="user-spring-boot-autoconfigure" target="16" />
-      <module name="user-spring-boot-starter" target="16" />
-      <module name="user-test" target="16" />
-      <module name="yoyo" target="16" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="code-maker" options="-parameters" />
+      <module name="ack" options="-parameters" />
+      <module name="confirm" options="-parameters" />
+      <module name="delay" options="-parameters" />
+      <module name="delayed" options="-parameters" />
       <module name="demo" options="-parameters" />
-      <module name="demsf" options="-parameters" />
       <module name="docker" options="-parameters" />
-      <module name="docker-demo" options="-parameters" />
-      <module name="docker-springboot-mysql-test" options="-parameters" />
-      <module name="jiji" options="-parameters" />
       <module name="my-redis-test" options="-parameters" />
       <module name="mybatis-plus" options="-parameters" />
+      <module name="oksir" options="-parameters" />
+      <module name="rabbitmq" options="-parameters" />
+      <module name="rabbitmq-boot" options="-parameters" />
       <module name="redis-spring-boot-autoconfigure" options="-parameters" />
       <module name="redis-spring-boot-starter" options="-parameters" />
       <module name="spring-boot" options="-parameters" />
-      <module name="spring-boot-actuator" options="-parameters" />
-      <module name="spring-boot-admin-client" options="-parameters" />
-      <module name="spring-boot-admin-server" options="-parameters" />
       <module name="spring-boot-cache" options="-parameters" />
-      <module name="springboot-init" options="-parameters" />
       <module name="user-boot" options="-parameters" />
-      <module name="user-spring-boot-autoconfigure" options="-parameters" />
-      <module name="user-spring-boot-starter" options="-parameters" />
-      <module name="user-test" options="-parameters" />
-      <module name="yoyo" options="-parameters" />
     </option>
   </component>
 </project>

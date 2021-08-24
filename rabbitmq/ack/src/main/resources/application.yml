@@ -1,0 +1,14 @@
+server:
+  port: 80
+
+spring:
+  rabbitmq:
+    host: 172.23.13.134
+    username: idea
+    password: 1234
+
+    # 配置手动ack
+    listener:
+      simple:
+        acknowledge-mode: manual
+

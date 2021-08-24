@@ -5,6 +5,11 @@
       <writeAnnotation name="com.jmc.anno.WebStaticFieldAutowired" />
     </writeAnnotations>
   </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/demo" />
+    <file type="web" url="file://$PROJECT_DIR$/docker" />
+    <file type="web" url="file://$PROJECT_DIR$/oksir" />
+  </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
@@ -49,7 +54,13 @@
         <option value="$PROJECT_DIR$/spring-transaction/pom.xml" />
         <option value="$PROJECT_DIR$/spring-xml/pom.xml" />
         <option value="$PROJECT_DIR$/docker/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/rabbitmq/delayed/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="16" project-jdk-type="JavaSDK">
