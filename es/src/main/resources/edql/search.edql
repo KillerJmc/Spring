@@ -1,0 +1,60 @@
+HOST http://localhost:9200
+
+DELETE /jmc
+
+PUT /jmc
+
+PUT /jmc/_create/1
+{ "name": "Merry", "age": 18, "gender": "女" }
+
+PUT /jmc/_create/2
+{ "name": "Jmc", "age": 21, "gender": "男" }
+
+PUT /jmc/_create/3
+{ "name": "Jenny", "age": 24, "gender": "女" }
+
+PUT /jmc/_create/4
+{ "name": "Lucy", "age": 16, "gender": "女" }
+
+PUT /jmc/_create/5
+{ "name": "Jack", "age": 28, "gender": "男" }
+
+PUT /jmc/_create/6
+{ "name": "Jerry", "age": 33, "gender": "男" }
+
+GET /jmc/_search
+
+# 查询性别为女且年龄小于20岁的人，按年龄升序排列，并高亮显示性别
+GET /jmc/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "gender": "女"
+          }
+        }
+      ],
+      "filter": {
+        "range": {
+          "age": {
+            "lt": 20
+          }
+        }
+      }
+    }
+  },
+  "sort": [
+    {
+      "age": {
+        "order": "asc"
+      }
+    }
+  ],
+  "highlight": {
+    "fields": {
+      "gender": {}
+    }
+  }
+}

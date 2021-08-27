@@ -1,0 +1,75 @@
+HOST http://localhost:9200
+
+# 索引
+  ## 创建索引
+  PUT /jmc
+
+  ## 查看索引
+  GET /jmc
+
+  ## 查看所有索引的详细信息
+  GET /_cat/indices?v
+
+# CRUD
+  ## 加入id为1的记录
+  # PUT /jmc/_doc/1 也行
+  PUT /jmc/_create/1
+  {
+    "name": "Lucy",
+    "age": 16
+  }
+
+  ## 获取id为1的记录
+  GET /jmc/_doc/1
+
+  ## 修改记录
+    ### 全部修改
+    PUT /jmc/_doc/1
+    {
+      "name": "Lucy",
+      "age": 20
+    }
+
+    ### 部分修改
+    POST /jmc/_update/1
+    {
+      "doc": {
+        "name": "Lucy",
+        "age": 15
+      }
+    }
+
+# 搜索
+  ## 搜索全部
+  GET /jmc/_search
+
+  ## 搜索关键词
+  GET /jmc/_search?q=name:Lucy
+
+  ## 高级搜索
+  GET /jmc/_search
+  {
+    # 查询
+    "query": {
+      # 匹配一个词就会显示出来
+      "match": {
+        "name": "Lucy"
+      }
+    },
+
+    # 结果过滤
+    "_source": ["id", "age"],
+
+    # 排序
+    "sort": [
+      {
+        "age": {
+          "order": "desc"
+        }
+      }
+    ],
+
+    # 分页查询（从哪个下标开始，一共显示几条数据）
+    "from": 0,
+    "size": 1,
+  }

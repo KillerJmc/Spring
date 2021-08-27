@@ -35,7 +35,6 @@
         <option value="$PROJECT_DIR$/spring-boot-auto-config/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-autoconfig/redis-spring-boot-autoconfigure/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-autoconfig/redis-spring-boot-starter/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot-autoconfig/my-redis-test/pom.xml" />
         <option value="$PROJECT_DIR$/demo/user-spring-boot-autoconfigure/pom.xml" />
         <option value="$PROJECT_DIR$/demo/user-spring-boot-starter/pom.xml" />
         <option value="$PROJECT_DIR$/demo/user-test/pom.xml" />
@@ -55,6 +54,8 @@
         <option value="$PROJECT_DIR$/spring-xml/pom.xml" />
         <option value="$PROJECT_DIR$/docker/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/es/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-autoconfig/my-redis-test/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
