@@ -20,12 +20,13 @@
         <module name="download" />
         <module name="spring-boot-autoconfig" />
         <module name="elastic-search" />
+        <module name="provider" />
         <module name="spring-boot-cache" />
         <module name="spring-aop" />
         <module name="redis-spring-boot-autoconfigure" />
+        <module name="consumer" />
         <module name="my-redis-test" />
         <module name="apply" />
-        <module name="spring-anno" />
         <module name="es" />
         <module name="confirm" />
         <module name="spring-transaction" />
@@ -37,19 +38,27 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ack" target="16" />
+      <module name="api" target="16" />
       <module name="apply" target="15" />
       <module name="confirm" target="16" />
+      <module name="Consumer" target="16" />
+      <module name="consumer" target="16" />
       <module name="delay" target="16" />
       <module name="delayed" target="16" />
       <module name="demo" target="16" />
       <module name="docker" target="16" />
       <module name="download" target="16" />
+      <module name="dubbo" target="16" />
       <module name="elastic-search" target="16" />
       <module name="es" target="16" />
       <module name="my-redis-test" target="16" />
       <module name="mybatis" target="16" />
       <module name="mybatis-plus" target="16" />
       <module name="oksir" target="11" />
+      <module name="order-service-consumer" target="16" />
+      <module name="producer" target="16" />
+      <module name="product-interface" target="16" />
+      <module name="provider" target="16" />
       <module name="rabbitmq" target="16" />
       <module name="rabbitmq-boot" target="16" />
       <module name="rabbitmq0" target="16" />
@@ -68,11 +77,13 @@
       <module name="ssm" target="16" />
       <module name="user" target="16" />
       <module name="user-boot" target="16" />
+      <module name="user-service-provider" target="16" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ack" options="-parameters" />
+      <module name="api" options="-parameters" />
       <module name="confirm" options="-parameters" />
       <module name="delay" options="-parameters" />
       <module name="delayed" options="-parameters" />
@@ -83,6 +94,7 @@
       <module name="my-redis-test" options="-parameters" />
       <module name="mybatis-plus" options="-parameters" />
       <module name="oksir" options="-parameters" />
+      <module name="producer" options="" />
       <module name="rabbitmq" options="-parameters" />
       <module name="rabbitmq-boot" options="-parameters" />
       <module name="redis-spring-boot-autoconfigure" options="-parameters" />

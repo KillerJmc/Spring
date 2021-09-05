@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  nacos:
+    image: nacos/nacos-server
+    ports:
+      - '8848:8848'
+      # rpc port
+      - '9848:9848'
+    environment:
+      # single node mode
+      MODE: standalone

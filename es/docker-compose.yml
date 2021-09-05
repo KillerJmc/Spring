@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  rabbitmq:
+    image: elasticsearch:7.14.0
+    ports:
+      - '9200:9200'
+    environment:
+      discovery.type: single-node

@@ -47,7 +47,6 @@
         <option value="$PROJECT_DIR$/demo1/pom.xml" />
         <option value="$PROJECT_DIR$/demo/yoyoyo/pom.xml" />
         <option value="$PROJECT_DIR$/apply/user-boot/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-anno/pom.xml" />
         <option value="$PROJECT_DIR$/spring-aop/pom.xml" />
         <option value="$PROJECT_DIR$/spring-mvc/pom.xml" />
         <option value="$PROJECT_DIR$/spring-transaction/pom.xml" />
@@ -56,10 +55,19 @@
         <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
         <option value="$PROJECT_DIR$/es/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-autoconfig/my-redis-test/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo/api/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo/consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo/provider/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/dubbo/api/producer/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo/order-service-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo/product-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo/user-service-provider/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/delayed/pom.xml" />
       </set>
     </option>
