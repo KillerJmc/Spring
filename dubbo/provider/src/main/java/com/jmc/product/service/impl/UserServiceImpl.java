@@ -1,6 +1,5 @@
 package com.jmc.product.service.impl;
 
-
 import com.jmc.product.api.pojo.User;
 import com.jmc.product.api.service.UserService;
 import com.jmc.product.mapper.UserMapper;
