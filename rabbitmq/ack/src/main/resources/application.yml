@@ -3,9 +3,9 @@ server:
 
 spring:
   rabbitmq:
-    host: 172.23.13.134
-    username: idea
-    password: 1234
+    host: 192.168.137.10
+    username: admin
+    password: admin
 
     # 配置手动ack
     listener:

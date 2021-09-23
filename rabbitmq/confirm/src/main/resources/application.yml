@@ -3,9 +3,9 @@ server:
 
 spring:
   rabbitmq:
-    host: 172.23.13.134
-    username: idea
-    password: 1234
+    host: 192.168.137.10
+    username: admin
+    password: admin
     # 发布确认（检测 生产者 -> 交换机），检测成功与否
     publisher-confirm-type: correlated
     # 返回确认（检测 交换机 -> 队列），只检测失败

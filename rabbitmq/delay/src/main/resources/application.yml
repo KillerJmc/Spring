@@ -3,6 +3,6 @@ server:
 
 spring:
   rabbitmq:
-    host: 172.23.4.70
+    host: 192.168.137.10
     username: admin
     password: admin
