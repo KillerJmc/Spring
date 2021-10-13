@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.TransactionManager;
 
 import javax.sql.DataSource;
 
@@ -25,7 +27,7 @@ public class JdbcConfig {
     private String password;
 
     @Bean
-    public DataSource getDataSource() {
+    public DataSource dataSource() {
         var dataSource = new DruidDataSource();
         dataSource.setUrl(url);
         dataSource.setUsername(username);
@@ -33,17 +35,11 @@ public class JdbcConfig {
         return dataSource;
     }
 
-    private DataSource dataSource;
-
-    @Autowired
-    public void setDataSource(DataSource dataSource) {
-        this.dataSource = dataSource;
-    }
-
     /*
          需要导入spring-jdbc的包，mybatis底层要用到这个事务管理器，然后这个可写可不写
 
-         public TransactionManager getTransactionManager() {
+         @Bean
+         public TransactionManager transactionManager() {
             return new DataSourceTransactionManager(dataSource);
          }
      */
@@ -53,9 +49,7 @@ public class JdbcConfig {
      * 把mapper放进容器中
      */
     @Bean
-    public SqlSessionFactory getSqlSessionFactory() throws Exception {
-        var sqlSessionFactoryBean = new SqlSessionFactoryBean();
-        sqlSessionFactoryBean.setDataSource(dataSource);
+    public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
         /*
             手动添加mapper的xml多个文件（stuMapper.xml位于resources目录下）
 
@@ -63,7 +57,8 @@ public class JdbcConfig {
                     new ClassPathResource("xxx.xml"));
 
         */
-        sqlSessionFactoryBean.setMapperLocations(new ClassPathResource("stuMapper.xml"));
-        return sqlSessionFactoryBean.getObject();
+        return new SqlSessionFactoryBean() {{
+            setDataSource(dataSource);
+        }}.getObject();
     }
 }
