@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  oracle-xe:
+    # https://hub.docker.com/r/gvenzl/oracle-xe
+    image: gvenzl/oracle-xe:21.3.0-faststart
+    environment:
+      # 设置sys或system用户的密码
+      ORACLE_PASSWORD: system
+    ports:
+      - "1521:1521"
