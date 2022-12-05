@@ -1,11 +1,16 @@
 version: '3.7'
 
 services:
-  oracle-xe:
+  oracle-xe-11g:
     # https://hub.docker.com/r/gvenzl/oracle-xe
-    image: gvenzl/oracle-xe:21.3.0-faststart
+    image: gvenzl/oracle-xe:11-slim-faststart
     environment:
       # 设置sys或system用户的密码
       ORACLE_PASSWORD: system
+    # 注意：直接启动会报错，必须先去掉该挂载
+    # 先直接执行后将这个文件夹用docker-compose cp出来才能使用这个挂载
+    # 命令如下：docker-compose cp oracle-xe-11g:/u01/app/oracle/oradata ./data
+    volumes:
+      - ./data:/u01/app/oracle/oradata
     ports:
       - "1521:1521"
