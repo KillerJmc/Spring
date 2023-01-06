@@ -1,0 +1,20 @@
+version: "3.6"
+
+services:
+  gitlab:
+    image: "gitlab/gitlab-ce:15.7.1-ce.0"
+    restart: always
+    environment:
+      # 设置git clone时的域名
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url "http://localhost"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "22:22"
+    volumes:
+      - "./gitlab/config:/etc/gitlab"
+      - "./gitlab/logs:/var/log/gitlab"
+      - "./gitlab/data:/var/opt/gitlab"
+    # 设置使用虚拟内存的最大值
+    shm_size: "256m"
